@@ -22,12 +22,9 @@ PADDING_LENGTH = 512
 
 print('\nDefining hyperparameters\n')
 epochs = 30
-bs_list = [4, 8, 16, 32]
-lr_list = [1e-5, 5e-5, 1e-4]
-grad_acc_list = [4, 8 ,16]
-batch_size = bs_list[int(sys.argv[1])]
-learning_rate = lr_list[int(sys.argv[2])]
-grad_accumulate = grad_acc_list[int(sys.argv[3])] 
+batch_size = int(sys.argv[1])
+learning_rate = int(sys.argv[2])
+grad_accumulate = int(sys.argv[3])
 
 path = 'saved_models/without_blank_lr='+str(learning_rate)+"bs="+str(batch_size)+"g_a="+str(grad_accumulate)+'.pt' 
 
